@@ -1,0 +1,83 @@
+.icon {
+  display: inline-block;
+
+  &.example-png-icon {
+    background: url(img/icons/example.png);
+    width: 30px;
+    height: 30px;
+  }
+
+  // app/elements/index-page/svg-icons
+  &-icon-VK {
+    width: 15px;
+    height: 8px;
+    fill: #747474;
+  }
+
+  &-icon-inst {
+    width: 15px;
+    height: 14px;
+    fill: #747474;
+  }
+
+  &-icon-fb {
+    width: 6px;
+    height: 13px;
+    fill: #747474;
+  }
+
+  &-header-logo {
+    width: 153px;
+    height: 45px;
+    fill: #ffffff;
+  }
+
+  &-arrow-down {
+    width: 11px;
+    height: 11px;
+    fill: rgba(#fff, .4);
+  }
+
+  &-3d {
+    width: 31px;
+    height: 29px;
+    fill: rgba(#fff, .5);
+  }
+
+  &-photo {
+    width: 20px;
+    height: 16px;
+    fill: rgba(#fff, .5);
+  }
+
+  &-anf {
+    width: 16px;
+    height: 18px;
+    fill: rgba(#fff, .5);
+  }
+
+  &-prof {
+    width: 15px;
+    height: 19px;
+    fill: rgba(#fff, .5);
+  }
+
+  &-arrow-upload {
+    width: 9px;
+    height: 13px;
+    fill: #17ddff;
+  }
+
+  &-upload-man {
+    width: 60px;
+    height: 70px;
+    fill: #17ddff;
+  }
+
+  &-arrow {
+    width: 14px;
+    height: 9px;
+    fill: #fff;
+  }
+
+}

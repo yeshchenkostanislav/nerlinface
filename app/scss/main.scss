@@ -1,0 +1,58 @@
+@import "_fonts";
+@import "_mixins";
+@import "_variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $base-font;
+  font-size: $base-font-size;
+  min-width: 320px;
+  background: #181718;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: $base-font;
+  outline: none;
+  transition: .4s;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input {
+  font-family: $base-font;
+  outline: none;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 30px;
+  width: 1425px;
+}
+
+@import "icons";
+
+// index-page
+@import "../elements/index-page/index-page";
