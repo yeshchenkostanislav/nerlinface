@@ -90,9 +90,6 @@
                   option._options Болотный
                   option._options Карий
                   option._options Чёрный
-        ._terms-use
-          a(href="#", title="title")._terms-use-link Пользовательское соглашение
-          a(href="#", title="title")._terms-use-link О проекте
       ._main-window
         ._upload-file
           label._upload-photo
@@ -102,54 +99,129 @@
               | Загрузить фото
               ._arrow-upload
                 +svg('arrow-upload', 'index-page__arrow-upload-svg animate')
+        ._subparagraphs-info
+          ._subparagraphs-info-header
+            ._subparagraphs-num
+              ._subparagraphs-text Подпараметр 1
+              ._hint ?
+            ._subparagraphs-info-close
+              | Скрыть
+              +svg('arrow', 'index-page__close-arrow')
+          ._subparagraphs-info-text Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить.
       ._parameter-list        
         ._parameter-list-item
           ._parameter-list-item-header
             ._parameter-list-item-btn
-              | параметр 1
+              ._parameter-list-item-btn-text параметр 1
               +svg('arrow')
             ._hint ?
           ._subparagraphs-list
-            ._subparagraphs-list-item.-active
-              | Подпараметр 1
+            ._subparagraphs-list-item
+              ._subparagraphs-list-item-text Подпараметр 1
               ._hint.-sub ?
             ._subparagraphs-list-item
-              | Подпараметр 2
+              ._subparagraphs-list-item-text Подпараметр 2
               ._hint.-sub ?
             ._subparagraphs-list-item
-              | Подпараметр 3
+              ._subparagraphs-list-item-text Подпараметр 3
               ._hint.-sub ?
 
         ._parameter-list-item
           ._parameter-list-item-header
             ._parameter-list-item-btn
-              | параметр 2
+              ._parameter-list-item-btn-text параметр 2
               +svg('arrow')
             ._hint ?
           ._subparagraphs-list
             ._subparagraphs-list-item.-active
-              | Подпараметр 1
+              ._subparagraphs-list-item-text Подпараметр 1
               ._hint.-sub ?
             ._subparagraphs-list-item
-              | Подпараметр 2
+              ._subparagraphs-list-item-text Подпараметр 2
               ._hint.-sub ?
             ._subparagraphs-list-item
-              | Подпараметр 3
+              ._subparagraphs-list-item-text Подпараметр 3
               ._hint.-sub ?
 
         ._parameter-list-item
           ._parameter-list-item-header
             ._parameter-list-item-btn
-              | параметр 3
+              ._parameter-list-item-btn-text параметр 3
               +svg('arrow')
             ._hint ?
           ._subparagraphs-list
             ._subparagraphs-list-item.-active
-              | Подпараметр 1
+              ._subparagraphs-list-item-text Подпараметр 1
               ._hint.-sub ?
             ._subparagraphs-list-item
-              | Подпараметр 2
+              ._subparagraphs-list-item-text Подпараметр 2
               ._hint.-sub ?
             ._subparagraphs-list-item
-              | Подпараметр 3
+              ._subparagraphs-list-item-text Подпараметр 3
               ._hint.-sub ?
+    ._footer
+      ._terms-use
+        a(href="#", title="title")._terms-use-link Пользовательское соглашение
+        a(href="#", title="title")._terms-use-link О проекте
+      +icon('footer-logo', 'index-page__footer-logo')
+    ._sidebar
+      ._sidebar-info
+        +svg('header-logo', 'index-page__header-logo')
+        ._sidebar-close &#10006;
+
+      input(type="text" placeholder="поиск")._sidebar-search
+
+      ._list-categories
+        ._list-categories-item
+          ._list-categories-item-title Актеры
+          ._drop-down-list
+            ._names-people-list
+              ._names-people-list-item Том Харди
+              ._names-people-list-item Брюс Уиллис
+            ._add-names-people
+              input(type="text" placeholder="добавить")._add-names-people-input
+              ._plus.-names-people-list-item +
+              
+        ._list-categories-item
+          ._list-categories-item-title Политики
+          ._drop-down-list
+            ._names-people-list
+              ._names-people-list-item Том Харди
+              ._names-people-list-item Брюс Уиллис
+            ._add-names-people
+              input(type="text" placeholder="добавить")._add-names-people-input
+              ._plus.-names-people-list-item +
+
+        ._list-categories-item
+          ._list-categories-item-title блогеры
+          ._drop-down-list
+            ._names-people-list
+              ._names-people-list-item Том Харди
+              ._names-people-list-item Брюс Уиллис
+            ._add-names-people
+              input(type="text" placeholder="добавить")._add-names-people-input
+              ._plus.-names-people-list-item +
+
+        ._list-categories-item
+          ._list-categories-item-title бизнес
+          ._drop-down-list
+            ._names-people-list
+              ._names-people-list-item Том Харди
+              ._names-people-list-item Брюс Уиллис
+            ._add-names-people
+              input(type="text" placeholder="добавить")._add-names-people-input
+              ._plus.-names-people-list-item +
+
+        ._list-categories-item
+          ._list-categories-item-title модели
+          ._drop-down-list
+            ._names-people-list
+              ._names-people-list-item Том Харди
+              ._names-people-list-item Брюс Уиллис
+            ._add-names-people
+              input(type="text" placeholder="добавить")._add-names-people-input
+              ._plus.-names-people-list-item +
+      ._add-list-categories-item
+        input(type="text" placeholder="добавить")._add-list-categories-item-input
+        ._plus.-list-categories-item +
+
