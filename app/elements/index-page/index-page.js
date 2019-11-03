@@ -55,14 +55,29 @@ $('.index-page__subparagraphs-info-close').click(function () {
 });
 
 // открытие окна при нажатии на подпараметр
-$('.index-page__subparagraphs-list-item-text').click(function () {
+/* $('.index-page__subparagraphs-list-item-text').click(function () {
 
   $('.index-page__subparagraphs-info').addClass('index-page__subparagraphs-info_active');
   let text = $(this).text();
   $('.index-page__subparagraphs-text').text(text);
 
   run('.index-page__subparagraphs-info-text');
+}); */
+$('.index-page__subparagraphs-list-item-text').click(function () {
+
+  var id = $(this).attr('data-tab'),
+    content = $('.index-page__subparagraphs-info[data-tab="' + id + '"]');
+
+  $('.index-page__subparagraphs-info').removeClass('index-page__subparagraphs-info_active');
+  content.addClass('index-page__subparagraphs-info_active');
+  let text = $(this).text();
+
+  content.find('.index-page__subparagraphs-text').text(text);
+
+  run(content.find('.index-page__subparagraphs-info-text'));
 });
+
+
 
 function run(nameOf) {
   var a = new String;
