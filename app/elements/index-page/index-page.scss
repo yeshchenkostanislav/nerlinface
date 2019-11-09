@@ -1,5 +1,5 @@
 .index-page {
-  background: url(img/index-page-bg.svg)no-repeat top;
+  background: url(img/index-page-bg.svg) no-repeat top;
   background-position: center -122px;
   width: 100%;
   height: 100%;
@@ -37,31 +37,60 @@
     &_active {
       width: 26px;
     }
+    &:hover {
+      cursor: pointer;
+      width: 22px;
+      #{$root} {
+        &__menu-line {
+          width: 22px;
+          box-shadow: 0 0 15px #17ddffb3;
+          &:after, &:before {
+            width: 22px;
+            left: 0;
+            box-shadow: 0 0 15px #17ddffb3;
+          }
+        }
+      }
+    }
   }
 
   &__menu-line {
-    width: 17px;
-    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
     background: #ffffff;
+    transition: .4s;
+    transition-delay: .05s;
+    box-shadow: 0 0 15px transparent;
 
     &:after {
       content: '';
       position: absolute;
       display: block;
-      width: 12px;
-      height: 3px;
+      width: 17px;
+      height: 2px;
       background: #ffffff;
-      bottom: 0;
+      top: 7px;
+      left: 5px;
+      transition: .4s;
+      transition-delay: .1s;
+      box-shadow: 0 0 15px transparent;
     }
 
     &:before {
       content: '';
       position: absolute;
       display: block;
-      width: 100%;
-      height: 3px;
+      width: 12px;
+      height: 2px;
       background: #ffffff;
-      top: 0;
+      top: 14px;
+      left: 10px;
+      transition: .4s;
+      transition-delay: .15s;
+      box-shadow: 0 0 15px transparent;
     }
 
     &_active {
@@ -143,10 +172,13 @@
     margin: 0 10px 0 0;
     width: 135px;
     transition: .4s;
+    opacity: 0;
+    visibility: hidden;
 
     &_active {
       color: #17ddff;
-
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -190,7 +222,7 @@
     padding: 0 0 0 30px;
     border-left: 1px solid rgba(#cdcdcd, .25);
     position: relative;
-    margin: 0 183px 0 0;
+    width: 250px;
   }
 
   &__information-person-name {
@@ -227,6 +259,12 @@
       left: -5px;
     }
   }
+  &__psychotype-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-right: 250px;
+  }
 
   &__psychotype-box {
     max-width: 780px;
@@ -256,18 +294,47 @@
     color: #ffffff;
     cursor: pointer;
     position: relative;
-
+    transition: .4s;
     &:before {
       content: '';
-      width: 9px;
-      height: 9px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
       display: block;
       position: absolute;
       background: #ffffff;
-      left: 50%;
-      transform: translateX(-50%);
+      left: calc(50% - 5px);
       top: -41px;
+      box-shadow: 0 0 15px rgba(23, 221, 255, 0);
+      transition: .4s;
+      z-index: 1;
+    }
+    &:after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      border: 1px solid #17ddff;
+      left: calc(50% - 3px);
+      top: -39px;
+      box-shadow: 0 0 15px rgba(23, 221, 255, 0);
+      opacity: 0;
+      transition: .4s;
+    }
+    &:hover {
+      &:before {
+        background: #17ddff;
+        box-shadow: 0 0 15px rgba(23, 221, 255, 1);
+      }
+      &:after {
+        width: 70px;
+        height: 70px;
+        left: calc(50% - 35px);
+        top: -72px;
+        animation: animateCirce 1.2s 1;
+      }
     }
 
     &_active {
@@ -500,8 +567,7 @@
   }
 
   &__upload-photo-input {
-    opacity: 0;
-    position: absolute;
+    display: none;
   }
 
   &__label {
@@ -511,32 +577,39 @@
     font-size: 14px;
     text-transform: uppercase;
     padding: 50px 0 0 0;
+    transition: .4s;
 
     &:after {
       content: '';
       position: absolute;
       display: block;
-      bottom: -40px;
-      left: -20px;
+      bottom: 0;
+      left: 0;
       width: 40px;
       height: 40px;
       background: transparent;
       border-bottom: 1px solid #17ddff;
       border-left: 1px solid #17ddff;
+      transition: .4s;
     }
 
     &:before {
       content: '';
       position: absolute;
       display: block;
-      bottom: -40px;
-      right: -20px;
+      bottom: 0;
+      right: 0;
       width: 40px;
       height: 40px;
       background: transparent;
       border-bottom: 1px solid #17ddff;
       border-right: 1px solid #17ddff;
+      transition: .4s;
     }
+  }
+
+  &__upload-icon {
+    position: relative;
   }
 
   &__arrow-upload {
@@ -550,36 +623,74 @@
   }
 
   &__upload-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 180px;
+    height: 230px;
+    &:hover {
+      cursor: pointer;
+      .icon-upload-man_hover {
+        opacity: 1;
+      }
+      &:after {
+        content: '';
+        top: -5px;
+        left: -5px;
+      }
+      &:before {
+        content: '';
+        top: -5px;
+        right: -5px;
+      }
+      #{$root} {
+        &__label {
+          &:after {
+            content: '';
+            bottom: -5px;
+            left: -5px;
+          }
+          &:before {
+            content: '';
+            bottom: -5px;
+            right: -5px;
+          }
+        }
+      }
+    }
     &:after {
       content: '';
       position: absolute;
       display: block;
-      top: -40px;
-      left: -20px;
+      top: 0;
+      left: 0;
       width: 40px;
       height: 40px;
       background: transparent;
       border-top: 1px solid #17ddff;
       border-left: 1px solid #17ddff;
+      transition: .4s;
     }
 
     &:before {
       content: '';
       position: absolute;
       display: block;
-      top: -40px;
-      right: -20px;
+      top: 0;
+      right: 0;
       width: 40px;
       height: 40px;
       background: transparent;
       border-top: 1px solid #17ddff;
       border-right: 1px solid #17ddff;
+      transition: .4s;
     }
 
     &:hover {
       cursor: pointer;
 
-      >#{$root} {
+      > #{$root} {
         &__label {
           text-shadow: 0 0 15px rgba(23, 221, 255, 0.7);
         }
@@ -782,8 +893,6 @@
   }
 }
 
-
-
 @keyframes move {
   from {
     transform: translateY(0px);
@@ -798,4 +907,13 @@
   animation-name: move;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+}
+
+@keyframes animateCirce {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0;
+  }
 }

@@ -1,22 +1,16 @@
 // визуальное изменение кнопки меню при наведении
-$('.index-page__menu').hover(function () {
-  $(this).toggleClass('index-page__menu_active')
-  $('.index-page__menu-line').toggleClass('index-page__menu-line_active');
-});
 
 // визуальное изменение соц сетей при наведении курсора
 $('.index-page__social-networks-list-item').hover(function () {
-  $(this).toggleClass('index-page__social-networks-list-item_active')
-  $('.index-page__social-networks-text').toggleClass('index-page__social-networks-text_active');
+    $('.index-page__social-networks-text').text('Рассказать друзьям');
+    $('.index-page__social-networks-text').addClass('index-page__social-networks-text_active');
 
-  // замена текста в зависимости от наведения на иконку соц сети
-  let link = $(this).attr('data-link');
-  if ($('.index-page__social-networks-text').text() == "Рассказать друзьям") {
-    $('.index-page__social-networks-text').text(link);
-  } else {
-    $('.index-page__social-networks-text').text("Рассказать друзьям");
-  }
-});
+    $('.index-page__social-networks-text').addClass('index-page__social-networks-text_active');
+    run('.index-page__social-networks-text', 20);
+})
+  .on('mouseleave blur', function() {
+      $('.index-page__social-networks-text').removeClass('index-page__social-networks-text_active');
+  });
 
 // применение класса active к типам
 $('.index-page__psychotype-list-item').click(function () {
@@ -64,26 +58,33 @@ $('.index-page__subparagraphs-list-item-text').click(function () {
   run('.index-page__subparagraphs-info-text');
 });
 
-function run(nameOf) {
+
+function run(nameOf, speed = 10) {
   var a = new String;
   a = $(nameOf).text();
   $(nameOf).text('');
   var c = a.length;
   var j = 0;
+  var percent = 0;
   var intervalListener = setInterval(function () {
     if (j < c) {
+      percent = j * 100 / c;
+      if(percent > 30) {
+        speed = 5;
+      }
+      console.log(percent);
       $(nameOf).text($(nameOf).text() + a[j]);
 
       // позволяет при закрытии окна по кнопке close остановить выполнение функции
       $('.index-page__subparagraphs-info-close').click(function () {
         $(nameOf).text(a);
         window.clearInterval(intervalListener);
-      })
+      });
 
       j = j + 1;
 
     } else {
       //$(nameOf).removeClass('after')
     }
-  }, 10);
-};
+  }, speed);
+}

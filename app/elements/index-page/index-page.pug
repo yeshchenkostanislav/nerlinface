@@ -1,227 +1,230 @@
 .index-page.section
-  ._wrap.wrap
-    ._header
-      ._header-info
-        +svg('header-logo', 'index-page__header-logo')
-        ._menu
-          span._menu-line 
-      ._header-box
-        ._user-info
-          ._user-info-photo
-            img(src="img/user-photo.png", alt="alt")._user-info-img
-          ._user-info-name
-            | Ксения Иванова
-            +svg('arrow-down', 'index-page__arrow-down')
-        ._social-networks
-          ._social-networks-text Рассказать друзьям
-          ._social-networks-list
-            a(href="#", title="title")._social-networks-list-item(data-link="Через VK")
-              +svg('icon-VK')
-            a(href="#", title="title")._social-networks-list-item(data-link="Через Instagram")
-              +svg('icon-inst')
-            a(href="#", title="title")._social-networks-list-item(data-link="Через Facebook")
-              +svg('icon-fb ')
-    ._psychotype-info
-      ._information-person       
-        ._information-person-name Том Харди     
-        ._information-person-profession Актер   
-      ._psychotype-box
-        ._psychotype-box-line
-        ._psychotype-list
-          a(href="#", title="title")._psychotype-list-item.-active нейротип
-          a(href="#", title="title")._psychotype-list-item психотип
-          a(href="#", title="title")._psychotype-list-item биотип
-          a(href="#", title="title")._psychotype-list-item социотип
-          a(href="#", title="title")._psychotype-list-item профтип
-          a(href="#", title="title")._psychotype-list-item характер 
-    ._content
-      ._opcions
-        ._model-list
-          ._model-list-item.-active
-            +svg('3d', 'index-page__3d') 
-            | 3D Модель
-          ._model-list-item
-            +svg('photo')
-            | фото
-          ._model-list-item
-            +svg('anf')
-            | 3D анфас
-          ._model-list-item
-            +svg('prof')
-            | профиль
-        ._characteristics-box
-          ._characteristics-box-line
-          ._characteristics
-            ._type-thinking
-              ._type-thinking-title Тип мышления:
-              ._type-thinking-text Абстрактно-эпизодический
-            ._characteristics-list
-              ._characteristics-list-item
-                ._characteristics-list-item-title Пол:
-                select._select
-                  option._options Мужской
-                  option._options Женский
+    ._wrap.wrap
+        ._header
+            ._header-info
+                +svg('header-logo', 'index-page__header-logo')
+                ._menu
+                    span._menu-line
+            ._header-box
+                ._user-info
+                    ._user-info-photo
+                        img(src="img/user-photo.png", alt="alt")._user-info-img
+                    ._user-info-name
+                        | Ксения Иванова
+                        +svg('arrow-down', 'index-page__arrow-down')
+                ._social-networks
+                    ._social-networks-text Рассказать друзьям
+                    ._social-networks-list
+                        a(href="#", title="title")._social-networks-list-item(data-link="Через VK")
+                            +svg('icon-VK')
+                        a(href="#", title="title")._social-networks-list-item(data-link="Через Instagram")
+                            +svg('icon-inst')
+                        a(href="#", title="title")._social-networks-list-item(data-link="Через Facebook")
+                            +svg('icon-fb ')
+        ._psychotype-info
+            ._information-person
+                ._information-person-name Том Харди
+                ._information-person-profession Актер
+            ._psychotype-container
+                ._psychotype-box
+                    ._psychotype-box-line
+                    ._psychotype-list
+                        a(href="#", title="title")._psychotype-list-item.-active нейротип
+                        a(href="#", title="title")._psychotype-list-item психотип
+                        a(href="#", title="title")._psychotype-list-item биотип
+                        a(href="#", title="title")._psychotype-list-item социотип
+                        a(href="#", title="title")._psychotype-list-item профтип
+                        a(href="#", title="title")._psychotype-list-item характер
+        ._content
+            ._opcions
+                ._model-list
+                    ._model-list-item.-active
+                        +svg('3d', 'index-page__3d')
+                        | 3D Модель
+                    ._model-list-item
+                        +svg('photo')
+                        | фото
+                    ._model-list-item
+                        +svg('anf')
+                        | 3D анфас
+                    ._model-list-item
+                        +svg('prof')
+                        | профиль
+                ._characteristics-box
+                    ._characteristics-box-line
+                    ._characteristics
+                        ._type-thinking
+                            ._type-thinking-title Тип мышления:
+                            ._type-thinking-text Абстрактно-эпизодический
+                        ._characteristics-list
+                            ._characteristics-list-item
+                                ._characteristics-list-item-title Пол:
+                                select._select
+                                    option._options Мужской
+                                    option._options Женский
 
-              ._characteristics-list-item
-                ._characteristics-list-item-title Вес:
-                ._characteristics-list-info
-                  input(type="text")._input
-                  ._characteristics-list-text кг
+                            ._characteristics-list-item
+                                ._characteristics-list-item-title Вес:
+                                ._characteristics-list-info
+                                    input(type="text")._input
+                                    ._characteristics-list-text кг
 
-              ._characteristics-list-item
-                ._characteristics-list-item-title Возраст:
-                ._characteristics-list-info
-                  input(type="text")._input
+                            ._characteristics-list-item
+                                ._characteristics-list-item-title Возраст:
+                                ._characteristics-list-info
+                                    input(type="text")._input
 
-              ._characteristics-list-item
-                ._characteristics-list-item-title Рост:
-                ._characteristics-list-info
-                  input(type="text")._input
-                  ._characteristics-list-text см
+                            ._characteristics-list-item
+                                ._characteristics-list-item-title Рост:
+                                ._characteristics-list-info
+                                    input(type="text")._input
+                                    ._characteristics-list-text см
 
-              ._characteristics-list-item
-                ._characteristics-list-item-title Цвет глаз:
-                select._select
-                  option._options Синий
-                  option._options Голубой
-                  option._options Серый
-                  option._options Зелёный
-                  option._options Янтарный
-                  option._options Болотный
-                  option._options Карий
-                  option._options Чёрный
-      ._main-window
-        ._upload-file
-          label._upload-photo
-            input(type="file")._upload-photo-input
-            +svg('upload-man')
-            ._label 
-              | Загрузить фото
-              ._arrow-upload
-                +svg('arrow-upload', 'index-page__arrow-upload-svg animate')
-        ._subparagraphs-info
-          ._subparagraphs-info-header
-            ._subparagraphs-num
-              ._subparagraphs-text Подпараметр 1
-              ._hint ?
-            ._subparagraphs-info-close
-              | Скрыть
-              +svg('arrow', 'index-page__close-arrow')
-          ._subparagraphs-info-text Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить.
-      ._parameter-list        
-        ._parameter-list-item
-          ._parameter-list-item-header
-            ._parameter-list-item-btn
-              ._parameter-list-item-btn-text параметр 1
-              +svg('arrow')
-            ._hint ?
-          ._subparagraphs-list
-            ._subparagraphs-list-item
-              ._subparagraphs-list-item-text Подпараметр 1
-              ._hint.-sub ?
-            ._subparagraphs-list-item
-              ._subparagraphs-list-item-text Подпараметр 2
-              ._hint.-sub ?
-            ._subparagraphs-list-item
-              ._subparagraphs-list-item-text Подпараметр 3
-              ._hint.-sub ?
+                            ._characteristics-list-item
+                                ._characteristics-list-item-title Цвет глаз:
+                                select._select
+                                    option._options Синий
+                                    option._options Голубой
+                                    option._options Серый
+                                    option._options Зелёный
+                                    option._options Янтарный
+                                    option._options Болотный
+                                    option._options Карий
+                                    option._options Чёрный
+            ._main-window
+                ._upload-file
+                    label._upload-photo
+                        input(type="file")._upload-photo-input
+                        ._upload-icon
+                            +svg('upload-man')
+                            +svg('upload-man_hover')
+                        ._label
+                            | Загрузить фото
+                            ._arrow-upload
+                                +svg('arrow-upload', 'index-page__arrow-upload-svg animate')
+                ._subparagraphs-info
+                    ._subparagraphs-info-header
+                        ._subparagraphs-num
+                            ._subparagraphs-text Подпараметр 1
+                            ._hint ?
+                        ._subparagraphs-info-close
+                            | Скрыть
+                            +svg('arrow', 'index-page__close-arrow')
+                    ._subparagraphs-info-text Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить.
+            ._parameter-list
+                ._parameter-list-item
+                    ._parameter-list-item-header
+                        ._parameter-list-item-btn
+                            ._parameter-list-item-btn-text параметр 1
+                            +svg('arrow')
+                        ._hint ?
+                    ._subparagraphs-list
+                        ._subparagraphs-list-item
+                            ._subparagraphs-list-item-text Подпараметр 1
+                            ._hint.-sub ?
+                        ._subparagraphs-list-item
+                            ._subparagraphs-list-item-text Подпараметр 2
+                            ._hint.-sub ?
+                        ._subparagraphs-list-item
+                            ._subparagraphs-list-item-text Подпараметр 3
+                            ._hint.-sub ?
 
-        ._parameter-list-item
-          ._parameter-list-item-header
-            ._parameter-list-item-btn
-              ._parameter-list-item-btn-text параметр 2
-              +svg('arrow')
-            ._hint ?
-          ._subparagraphs-list
-            ._subparagraphs-list-item.-active
-              ._subparagraphs-list-item-text Подпараметр 1
-              ._hint.-sub ?
-            ._subparagraphs-list-item
-              ._subparagraphs-list-item-text Подпараметр 2
-              ._hint.-sub ?
-            ._subparagraphs-list-item
-              ._subparagraphs-list-item-text Подпараметр 3
-              ._hint.-sub ?
+                ._parameter-list-item
+                    ._parameter-list-item-header
+                        ._parameter-list-item-btn
+                            ._parameter-list-item-btn-text параметр 2
+                            +svg('arrow')
+                        ._hint ?
+                    ._subparagraphs-list
+                        ._subparagraphs-list-item.-active
+                            ._subparagraphs-list-item-text Подпараметр 1
+                            ._hint.-sub ?
+                        ._subparagraphs-list-item
+                            ._subparagraphs-list-item-text Подпараметр 2
+                            ._hint.-sub ?
+                        ._subparagraphs-list-item
+                            ._subparagraphs-list-item-text Подпараметр 3
+                            ._hint.-sub ?
 
-        ._parameter-list-item
-          ._parameter-list-item-header
-            ._parameter-list-item-btn
-              ._parameter-list-item-btn-text параметр 3
-              +svg('arrow')
-            ._hint ?
-          ._subparagraphs-list
-            ._subparagraphs-list-item.-active
-              ._subparagraphs-list-item-text Подпараметр 1
-              ._hint.-sub ?
-            ._subparagraphs-list-item
-              ._subparagraphs-list-item-text Подпараметр 2
-              ._hint.-sub ?
-            ._subparagraphs-list-item
-              ._subparagraphs-list-item-text Подпараметр 3
-              ._hint.-sub ?
-    ._footer
-      ._terms-use
-        a(href="#", title="title")._terms-use-link Пользовательское соглашение
-        a(href="#", title="title")._terms-use-link О проекте
-      +icon('footer-logo', 'index-page__footer-logo')
-    ._sidebar
-      ._sidebar-info
-        +svg('header-logo', 'index-page__header-logo')
-        ._sidebar-close &#10006;
+                ._parameter-list-item
+                    ._parameter-list-item-header
+                        ._parameter-list-item-btn
+                            ._parameter-list-item-btn-text параметр 3
+                            +svg('arrow')
+                        ._hint ?
+                    ._subparagraphs-list
+                        ._subparagraphs-list-item.-active
+                            ._subparagraphs-list-item-text Подпараметр 1
+                            ._hint.-sub ?
+                        ._subparagraphs-list-item
+                            ._subparagraphs-list-item-text Подпараметр 2
+                            ._hint.-sub ?
+                        ._subparagraphs-list-item
+                            ._subparagraphs-list-item-text Подпараметр 3
+                            ._hint.-sub ?
+        ._footer
+            ._terms-use
+                a(href="#", title="title")._terms-use-link Пользовательское соглашение
+                a(href="#", title="title")._terms-use-link О проекте
+            +icon('footer-logo', 'index-page__footer-logo')
+        ._sidebar
+            ._sidebar-info
+                +svg('header-logo', 'index-page__header-logo')
+                ._sidebar-close &#10006;
 
-      input(type="text" placeholder="поиск")._sidebar-search
+            input(type="text" placeholder="поиск")._sidebar-search
 
-      ._list-categories
-        ._list-categories-item
-          ._list-categories-item-title Актеры
-          ._drop-down-list
-            ._names-people-list
-              ._names-people-list-item Том Харди
-              ._names-people-list-item Брюс Уиллис
-            ._add-names-people
-              input(type="text" placeholder="добавить")._add-names-people-input
-              ._plus.-names-people-list-item +
-              
-        ._list-categories-item
-          ._list-categories-item-title Политики
-          ._drop-down-list
-            ._names-people-list
-              ._names-people-list-item Том Харди
-              ._names-people-list-item Брюс Уиллис
-            ._add-names-people
-              input(type="text" placeholder="добавить")._add-names-people-input
-              ._plus.-names-people-list-item +
+            ._list-categories
+                ._list-categories-item
+                    ._list-categories-item-title Актеры
+                    ._drop-down-list
+                        ._names-people-list
+                            ._names-people-list-item Том Харди
+                            ._names-people-list-item Брюс Уиллис
+                        ._add-names-people
+                            input(type="text" placeholder="добавить")._add-names-people-input
+                            ._plus.-names-people-list-item +
 
-        ._list-categories-item
-          ._list-categories-item-title блогеры
-          ._drop-down-list
-            ._names-people-list
-              ._names-people-list-item Том Харди
-              ._names-people-list-item Брюс Уиллис
-            ._add-names-people
-              input(type="text" placeholder="добавить")._add-names-people-input
-              ._plus.-names-people-list-item +
+                ._list-categories-item
+                    ._list-categories-item-title Политики
+                    ._drop-down-list
+                        ._names-people-list
+                            ._names-people-list-item Том Харди
+                            ._names-people-list-item Брюс Уиллис
+                        ._add-names-people
+                            input(type="text" placeholder="добавить")._add-names-people-input
+                            ._plus.-names-people-list-item +
 
-        ._list-categories-item
-          ._list-categories-item-title бизнес
-          ._drop-down-list
-            ._names-people-list
-              ._names-people-list-item Том Харди
-              ._names-people-list-item Брюс Уиллис
-            ._add-names-people
-              input(type="text" placeholder="добавить")._add-names-people-input
-              ._plus.-names-people-list-item +
+                ._list-categories-item
+                    ._list-categories-item-title блогеры
+                    ._drop-down-list
+                        ._names-people-list
+                            ._names-people-list-item Том Харди
+                            ._names-people-list-item Брюс Уиллис
+                        ._add-names-people
+                            input(type="text" placeholder="добавить")._add-names-people-input
+                            ._plus.-names-people-list-item +
 
-        ._list-categories-item
-          ._list-categories-item-title модели
-          ._drop-down-list
-            ._names-people-list
-              ._names-people-list-item Том Харди
-              ._names-people-list-item Брюс Уиллис
-            ._add-names-people
-              input(type="text" placeholder="добавить")._add-names-people-input
-              ._plus.-names-people-list-item +
-      ._add-list-categories-item
-        input(type="text" placeholder="добавить")._add-list-categories-item-input
-        ._plus.-list-categories-item +
+                ._list-categories-item
+                    ._list-categories-item-title бизнес
+                    ._drop-down-list
+                        ._names-people-list
+                            ._names-people-list-item Том Харди
+                            ._names-people-list-item Брюс Уиллис
+                        ._add-names-people
+                            input(type="text" placeholder="добавить")._add-names-people-input
+                            ._plus.-names-people-list-item +
+
+                ._list-categories-item
+                    ._list-categories-item-title модели
+                    ._drop-down-list
+                        ._names-people-list
+                            ._names-people-list-item Том Харди
+                            ._names-people-list-item Брюс Уиллис
+                        ._add-names-people
+                            input(type="text" placeholder="добавить")._add-names-people-input
+                            ._plus.-names-people-list-item +
+            ._add-list-categories-item
+                input(type="text" placeholder="добавить")._add-list-categories-item-input
+                ._plus.-list-categories-item +
 
