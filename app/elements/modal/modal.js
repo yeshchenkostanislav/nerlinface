@@ -1,0 +1,1 @@
+var myModal = new Kmodal('.agreement');

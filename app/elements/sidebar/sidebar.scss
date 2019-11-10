@@ -3,11 +3,11 @@
     position: absolute;
     top: 0;
     left: -5px;
-    width: 270px;
+    width: 290px;
     height: 100vh;
     background: #2d2c2d;
     z-index: 100;
-    padding: 15px 20px 30px 20px;
+    padding: 15px 20px 30px 30px;
     transform: translateX(-270px);
     opacity: 0;
     transition: .4s;
@@ -61,6 +61,8 @@
     flex-direction: column;
     align-items: flex-start;
     margin: 25px 0 0 0;
+    transition: .4s;
+
   }
 
   &__list-categories-item {
@@ -158,6 +160,8 @@
     margin: 40px 0 0 0;
     display: flex;
     justify-content: flex-start;
+    transition: .4s;
+
   }
 
   &__add-list-categories-item-input {

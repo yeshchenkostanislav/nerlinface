@@ -1,0 +1,32 @@
+.modal {
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 940px;
+    color: #fff;
+    border: 1px solid #0195af;
+    background-color: #0f0e0f;
+    background: #000;
+    padding: 50px 20px;
+    position: relative;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  &__close {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    color: #0195af;
+    font-size: 25px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
