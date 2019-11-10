@@ -1,16 +1,28 @@
+$(".index-page__parameter-list").mCustomScrollbar({
+  scrollbarPosition: "outside",
+  autoHideScrollbar: true,
+  theme: "my-theme"
+});
+$(".index-page__opcions").mCustomScrollbar({
+  scrollbarPosition: "outside",
+  autoHideScrollbar: true,
+  theme: "my-theme"
+});
 $(".index-page__subparagraphs-info-text").niceScroll({
-  cursorcolor: "#1779ff",
-  background: "#fff",
-  cursorborderradius: 0,
-  autohidemode: 'leave'
+  cursorcolor: "17ddff",
+  cursorborder: "1px solid #17ddff",
+  cursorwidth: "1px",
 });
-
-$("body").niceScroll({
-  cursorcolor: "#1779ff",
-  background: "#fff",
-  cursorborderradius: 0,
-  autohidemode: 'leave'
-});
+/* $(".index-page__subparagraphs-info-text").mCustomScrollbar({
+  scrollbarPosition: "outside",
+  theme: "my-theme",
+  setHeight: '700',
+  callbacks: {
+    onSelectorChange: function () {
+      console.log("Scrollbars updated");
+    }
+  }
+}); */
 
 // визуальное изменение соц сетей при наведении курсора
 /* var typed = new Typed('.index-page__social-networks-text', {
@@ -21,8 +33,7 @@ $("body").niceScroll({
 $('.index-page__social-networks-list-item').hover(function () {
     $('.index-page__social-networks-text').addClass('index-page__social-networks-text_active');
 
-
-    /*  run('.index-page__social-networks-text', 20); */
+    run('.index-page__social-networks-text', 20);
   })
   .on('mouseleave blur', function () {
     $('.index-page__social-networks-text').removeClass('index-page__social-networks-text_active');
@@ -53,6 +64,7 @@ $('.index-page__parameter-list-item-header').click(function () {
 });
 
 $('.index-page__subparagraphs-list-item').click(function () {
+
   $('.index-page__subparagraphs-list-item').removeClass('index-page__subparagraphs-list-item_active');
   $(this).addClass('index-page__subparagraphs-list-item_active');
 })
@@ -76,7 +88,8 @@ $('.index-page__subparagraphs-list-item-text').click(function () {
 });
 
 
-function run(nameOf, speed = 10) {
+function run(nameOf, speed = 1) {
+
   var a = new String;
   a = $(nameOf).text();
   $(nameOf).text('');
@@ -87,9 +100,9 @@ function run(nameOf, speed = 10) {
     if (j < c) {
       percent = j * 100 / c;
       if (percent > 30) {
-        speed = 5;
+        speed = 8;
       }
-      console.log(percent);
+      //console.log(percent);
       $(nameOf).text($(nameOf).text() + a[j]);
 
       // позволяет при закрытии окна по кнопке close остановить выполнение функции
@@ -102,6 +115,8 @@ function run(nameOf, speed = 10) {
 
     } else {
       //$(nameOf).removeClass('after')
+      //$(".index-page__subparagraphs-info-text").addClass('index-page__subparagraphs-info-text_active')
+
     }
   }, speed);
 }
