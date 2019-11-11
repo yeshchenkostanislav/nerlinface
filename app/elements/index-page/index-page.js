@@ -53,12 +53,6 @@ $('.index-page__parameter-list-item-header').click(function () {
   $(this).next(".index-page__subparagraphs-list").toggleClass('index-page__subparagraphs-list_active');
 });
 
-$('.index-page__subparagraphs-list-item').click(function () {
-
-  $('.index-page__subparagraphs-list-item').removeClass('index-page__subparagraphs-list-item_active');
-  $(this).addClass('index-page__subparagraphs-list-item_active');
-})
-
 // скрытие окна с описанием подпараметра
 $('.index-page__subparagraphs-info-close').click(function () {
   $('.index-page__subparagraphs-info').removeClass('index-page__subparagraphs-info_active');
@@ -67,14 +61,31 @@ $('.index-page__subparagraphs-info-close').click(function () {
   $('.index-page__subparagraphs-list-item').removeClass('index-page__subparagraphs-list-item_active');
 });
 
+
 // открытие окна при нажатии на подпараметр
 $('.index-page__subparagraphs-list-item-text').click(function () {
 
-  $('.index-page__subparagraphs-info').addClass('index-page__subparagraphs-info_active');
-  let text = $(this).text();
-  $('.index-page__subparagraphs-text').text(text);
+  // проверяеться открыто ли окно с печ текстом, если нет то срабатывает скрипт, в противном случае нужно закрыть окно
+  if ($('.index-page__subparagraphs-info_active').length === 0) {
 
-  run('.index-page__subparagraphs-info-text');
+    $('.index-page__subparagraphs-list-item').removeClass('index-page__subparagraphs-list-item_active');
+    $(this).parents('.index-page__subparagraphs-list-item').addClass('index-page__subparagraphs-list-item_active');
+
+    /*  $('.index-page__subparagraphs-list-item').click(function () {
+       $('.index-page__subparagraphs-list-item').removeClass('index-page__subparagraphs-list-item_active');
+       $(this).addClass('index-page__subparagraphs-list-item_active');
+     }) */
+
+    $('.index-page__subparagraphs-info').addClass('index-page__subparagraphs-info_active');
+    let text = $(this).text();
+    $('.index-page__subparagraphs-text').text(text);
+
+    run('.index-page__subparagraphs-info-text');
+  } else {
+
+  }
+
+
 });
 
 
