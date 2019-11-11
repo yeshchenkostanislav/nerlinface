@@ -9,13 +9,17 @@
     border: 1px solid #0195af;
     background-color: #0f0e0f;
     background: #000;
-    padding: 50px 20px;
+    height: 60vh;
     position: relative;
   }
 
   &__text {
     font-size: 16px;
     line-height: 30px;
+    overflow-y: auto;
+    width: 95%;
+    height: 95%;
+    padding: 0 20px 0 0;
   }
 
   &__close {

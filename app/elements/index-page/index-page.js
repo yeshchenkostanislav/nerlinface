@@ -3,26 +3,16 @@ $(".index-page__parameter-list").mCustomScrollbar({
   autoHideScrollbar: true,
   theme: "my-theme"
 });
-$(".index-page__opcions").mCustomScrollbar({
-  scrollbarPosition: "outside",
-  autoHideScrollbar: true,
-  theme: "my-theme"
-});
 $(".index-page__subparagraphs-info-text").niceScroll({
   cursorcolor: "17ddff",
   cursorborder: "1px solid #17ddff",
   cursorwidth: "1px",
 });
-/* $(".index-page__subparagraphs-info-text").mCustomScrollbar({
-  scrollbarPosition: "outside",
-  theme: "my-theme",
-  setHeight: '700',
-  callbacks: {
-    onSelectorChange: function () {
-      console.log("Scrollbars updated");
-    }
-  }
-}); */
+$(".modal__text").niceScroll({
+  cursorcolor: "17ddff",
+  cursorborder: "1px solid #17ddff",
+  cursorwidth: "1px",
+});
 
 // визуальное изменение соц сетей при наведении курсора
 /* var typed = new Typed('.index-page__social-networks-text', {
@@ -88,6 +78,12 @@ $('.index-page__subparagraphs-list-item-text').click(function () {
 });
 
 
+// самопечатающийся текст в мод окне
+$('.index-page__terms-use .index-page__terms-use-link').click(function () {
+  run('.modal__text');
+})
+
+
 function run(nameOf, speed = 1) {
 
   var a = new String;
@@ -110,6 +106,11 @@ function run(nameOf, speed = 1) {
         $(nameOf).text(a);
         window.clearInterval(intervalListener);
       });
+
+      $('.modal__close').click(function () {
+        window.clearInterval(intervalListener);
+        $('.modal__text').text(a);
+      })
 
       j = j + 1;
 
