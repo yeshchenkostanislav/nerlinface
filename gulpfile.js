@@ -53,13 +53,15 @@ let path = {
             'bower_components/kmodal/dist/js/kmodal.min.js',
             'bower_components/jquery.nicescroll/dist/jquery.nicescroll.js',
             'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
-            'bower_components/jquery.nicescroll/dist/jquery.nicescroll.js'
+            'bower_components/jquery.nicescroll/dist/jquery.nicescroll.js',
+            'bower_components/swiper/package/js/swiper.min.js'
         ],
         vendor_css: [
             'bower_components/normalize-css/normalize.css',
             'bower_components/kmodal/dist/css/kmodal.min.css',
             'bower_components/flexible-scrollbar/flexible-scrollbar/flexible-scrollbar.min.css',
-            'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css'
+            'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css',
+            'bower_components/swiper/package/css/swiper.min.css'
         ]
     },
     watch: {

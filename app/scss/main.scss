@@ -57,7 +57,7 @@ input {
 }
 
 .mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  background-color: rgba(#17ddff, .5);
+  background-color: rgba($gold, .5);
 }
 
 .mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail {
@@ -65,7 +65,7 @@ input {
 }
 
 .nicescroll-rails-vr .nicescroll-cursors {
-  border: 1px solid rgba(#17ddff, .5) !important;
+  border: 1px solid rgba($gold, .5) !important;
 }
 
 @import "icons";

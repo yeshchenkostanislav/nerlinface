@@ -1,7 +1,7 @@
 .icon {
   display: inline-block;
 
-  &.footer-logo {
+  &.user-agreement-logo {
     background: url(img/icons/footer-logo.png)no-repeat center/cover;
     width: 143px;
     height: 43px;
@@ -24,6 +24,18 @@
     width: 6px;
     height: 13px;
     fill: #747474;
+  }
+
+  &-icon-youtube {
+    width: 14px;
+    height: 10px;
+    fill: rgba(#fff, .5);
+  }
+
+  &-icon-telegram {
+    width: 13px;
+    height: 11px;
+    fill: rgba(#fff, .5);
   }
 
   &-header-logo {
@@ -65,13 +77,14 @@
   &-arrow-upload {
     width: 9px;
     height: 13px;
-    fill: #17ddff;
+    fill: $gold;
   }
 
   &-upload-man {
     width: 60px;
     height: 70px;
-    fill: #17ddff;
+    fill: $gold;
+
     &_hover {
       position: absolute;
       width: 60px;
@@ -81,7 +94,7 @@
       bottom: 0;
       left: 0;
       z-index: 1;
-      fill: #17ddff;
+      fill: $gold;
       opacity: 0;
       transition: .4s;
     }
@@ -90,7 +103,22 @@
   &-arrow {
     width: 14px;
     height: 9px;
-    fill: #fff;
+    fill: #181718;
   }
+
+  &-referral-program {
+    width: 21px;
+    height: 22px;
+    fill: #747474;
+  }
+
+  &-position {
+    width: 11px;
+    height: 15px;
+    fill: #b1a881;
+  }
+
+
+
 
 }

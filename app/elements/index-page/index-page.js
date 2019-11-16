@@ -4,13 +4,13 @@ $(".index-page__parameter-list").mCustomScrollbar({
   theme: "my-theme"
 });
 $(".index-page__subparagraphs-info-text").niceScroll({
-  cursorcolor: "17ddff",
-  cursorborder: "1px solid #17ddff",
+  cursorcolor: "$gold",
+  cursorborder: "1px solid $gold",
   cursorwidth: "1px",
 });
 $(".modal__text").niceScroll({
-  cursorcolor: "17ddff",
-  cursorborder: "1px solid #17ddff",
+  cursorcolor: "$gold",
+  cursorborder: "1px solid $gold",
   cursorwidth: "1px",
 });
 
@@ -20,13 +20,13 @@ $(".modal__text").niceScroll({
   typeSpeed: 30
 }); */
 
-$('.index-page__social-networks-list-item').hover(function () {
-    $('.index-page__social-networks-text').addClass('index-page__social-networks-text_active');
+$('.social-networks__list-item').hover(function () {
+    $('.social-networks__text').addClass('social-networks__text_active');
 
-    run('.index-page__social-networks-text', 20);
+    //run('.social-networks__text', 20);
   })
   .on('mouseleave blur', function () {
-    $('.index-page__social-networks-text').removeClass('index-page__social-networks-text_active');
+    $('.social-networks__text').removeClass('social-networks__text_active');
   });
 
 // применение класса active к типам
@@ -132,3 +132,24 @@ function run(nameOf, speed = 1) {
     }
   }, speed);
 }
+
+var mySwiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  slidesPerView: 1,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+})

@@ -6,7 +6,7 @@
     width: 100%;
     max-width: 940px;
     color: #fff;
-    border: 1px solid #0195af;
+    border: 1px solid $gold;
     background-color: #0f0e0f;
     background: #000;
     height: 60vh;
@@ -26,7 +26,7 @@
     position: absolute;
     top: -25px;
     right: -25px;
-    color: #0195af;
+    color: $gold;
     font-size: 25px;
 
     &:hover {
