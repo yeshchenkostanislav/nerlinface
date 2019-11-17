@@ -1,0 +1,349 @@
+.content {
+  $root: &;
+  margin: 50px 0 0 0;
+
+  &__wrap {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__opcions {
+    max-width: 170px;
+    width: 100%;
+  }
+
+  &__information-person {
+    color: rgba(#fff, .7);
+    padding: 0 0 0 40px;
+    //border-left: 1px solid rgba(#cdcdcd, .25);
+    position: relative;
+    max-width: 265px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__information-person-name {
+    font-size: 18px;
+    line-height: 14px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #4e4e4e;
+      top: 0;
+      left: 1px;
+    }
+  }
+
+  &__information-person-profession {
+    font-size: 14px;
+    margin: 20px 0 0 0;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #cdcdcd;
+      border-radius: 50%;
+      background: #181718;
+      bottom: 0;
+      left: 1px;
+    }
+  }
+
+  &__characteristics-box {
+    display: flex;
+    align-items: flex-start;
+    margin: 30px 0 0 0;
+  }
+
+  &__characteristics-box-line {
+    position: absolute;
+    width: 2px;
+    height: 420px;
+    background-color: #cdcdcd;
+    opacity: 0.25;
+    margin: 0 0 0 5px;
+    z-index: -1;
+  }
+
+  &__characteristics {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 0 40px;
+  }
+
+  &__type-thinking {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__type-thinking-title {
+    color: rgba(#ffffff, .2);
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #4e4e4e;
+      left: -40px;
+      top: 3px;
+      z-index: 5;
+    }
+  }
+
+  &__type-thinking-text {
+    color: rgba(#ffffff, .7);
+    font-size: 16px;
+    line-height: 24px;
+    margin: 20px 0 0 0;
+  }
+
+  &__characteristics-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0 0 0;
+  }
+
+  &__characteristics-list-item {
+    &:not(:first-child) {
+      margin: 17px 0 0 0;
+    }
+  }
+
+  &__characteristics-list-item-title {
+    color: rgba(#ffffff, .2);
+    font-size: 13px;
+    text-transform: uppercase;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #cdcdcd;
+      border-radius: 50%;
+      background: #181718;
+      left: -40px;
+      top: 3px;
+      z-index: 5;
+    }
+  }
+
+  &__select {
+    outline: none;
+    font-family: "Andale Mono";
+    padding: 0px 19px 0px 0px;
+    font-size: 14px;
+    color: rgba(#fff, .7);
+    border: none;
+    border-bottom: 1px solid $gold-light;
+    height: 30px;
+    appearance: none;
+    background: url(img/arrow-select.png) 96% / 9% no-repeat transparent;
+    position: relative;
+    outline: 0px;
+
+    &_characteristics {
+      font-size: 18px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__options {
+    background: #000;
+    outline: none;
+    border: none;
+  }
+
+  &__characteristics-list-info {
+    display: flex;
+    align-items: center;
+    margin: 3px 0 0 0;
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid $gold;
+    background: transparent;
+    width: 30px;
+    margin: 0 10px 0 0;
+    padding: 2px 0;
+    font-size: 14px;
+    color: rgba(#fff, .7);
+  }
+
+  &__characteristics-list-text {
+    font-size: 14px;
+    color: rgba(#fff, .7);
+  }
+
+  &__user-info-list {
+    margin: 60px 0 0 0;
+  }
+
+  &__user-info-list-item {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin: 45px 0 0 0;
+    }
+
+    &:nth-child(n+3) {
+      #{$root} {
+        &__list-item-text {
+          text-transform: uppercase;
+          position: relative;
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+
+  &__user-info-svg {
+    width: 18px;
+    height: 20px;
+    fill: rgba(#ffffff, .35);
+  }
+
+  &__list-item-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+  }
+
+  &__list-item-text {
+    font-size: 14px;
+    color: rgba(#fff, .7);
+    margin: 0 0 0 10px;
+  }
+
+  &__center-block {
+    max-width: 800px;
+    position: relative;
+  }
+
+  &__slide-photo {
+    //text-align: center;
+  }
+
+  &__side-bar {
+    max-width: 225px;
+  }
+
+  &__referral-program {
+    display: flex;
+    align-items: center;
+    color: #9a9a9a;
+    font-size: 13px;
+    margin: -22px 0 0 0;
+
+    &:hover {
+      cursor: pointer;
+      color: $gold;
+
+      #{$root} {
+        &__referral-program-icon {
+          border: 1px solid $gold;
+        }
+
+        &__referral-program-svg {
+          fill: $gold;
+        }
+      }
+
+    }
+  }
+
+  &__referral-program-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #403e40;
+    margin: 0 0 0 15px;
+  }
+
+  &__side-bar-comment {
+    margin: 35px 0 0 0;
+    color: #cdcdcd;
+  }
+
+  &__side-bar-comment-title {
+    font-size: 17px;
+
+  }
+
+  &__side-bar-comment-text {
+    margin: 20px 0 0 0;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  &__characteristics-box {
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__characteristics-box-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 280px;
+    width: 100%;
+    margin: 30px 0 0 0;
+
+    &:nth-child(odd) {
+      margin: 30px 145px 0 0;
+    }
+  }
+
+  &__characteristics-box-item-title {
+    color: #878787;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0 20px 0 0;
+  }
+
+  &__center-block-comments {
+    margin: 65px 0 0 0;
+    color: #cdcdcd;
+    width: 100%;
+  }
+
+  &__center-block-comments-title {
+    font-size: 17px;
+  }
+
+  &__center-block-comments-text {
+    line-height: 24px;
+    margin: 30px 0 0 0;
+  }
+}

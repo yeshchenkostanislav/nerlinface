@@ -1,0 +1,221 @@
+.content {
+  $root: &;
+
+  &__add-slide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0 0 0;
+  }
+
+  &__add-slide-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 440px;
+    width: 100%;
+  }
+
+  &__upload-file {
+    text-align: center;
+    position: relative;
+    width: 170px;
+    height: 189px;
+
+    &:first-child {
+      #{$root} {
+        &__label {
+          padding: 55px 0 0 0;
+        }
+      }
+    }
+
+    &:last-child {
+      #{$root} {
+        &__label {
+          padding: 40px 0 0 0;
+        }
+      }
+    }
+  }
+
+  &__upload-photo-input {
+    display: none;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    color: $gold;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: .4s;
+    line-height: 24px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border-bottom: 1px solid $gold;
+      border-left: 1px solid $gold;
+      transition: .4s;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border-bottom: 1px solid $gold;
+      border-right: 1px solid $gold;
+      transition: .4s;
+    }
+  }
+
+  &__upload-icon {
+    position: relative;
+  }
+
+  &__arrow-upload {
+    width: 9px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $gold;
+    margin: 0 0 0 10px;
+  }
+
+  &__upload-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 170px;
+    height: 189px;
+
+    &:hover {
+      cursor: pointer;
+
+      .icon-upload-man_hover {
+        opacity: 1;
+      }
+
+      &:after {
+        content: '';
+        top: -5px;
+        left: -5px;
+      }
+
+      &:before {
+        content: '';
+        top: -5px;
+        right: -5px;
+      }
+
+      #{$root} {
+        &__label {
+          &:after {
+            content: '';
+            bottom: -5px;
+            left: -5px;
+          }
+
+          &:before {
+            content: '';
+            bottom: -5px;
+            right: -5px;
+          }
+        }
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border-top: 1px solid $gold;
+      border-left: 1px solid $gold;
+      transition: .4s;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border-top: 1px solid $gold;
+      border-right: 1px solid $gold;
+      transition: .4s;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      >#{$root} {
+        &__label {
+          text-shadow: 0 0 15px rgba($gold, 0.7);
+        }
+      }
+    }
+  }
+
+  &__slider-top-box {
+    max-width: 260px;
+    width: 100%;
+  }
+}
+
+.gallery-thumbs {
+  max-width: 700px;
+  padding: 0 0 15px 0;
+
+  &-btn {
+    color: #868586;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    outline: none;
+    transition: .4s;
+
+    &:hover {
+      cursor: pointer;
+      color: $gold;
+    }
+
+    &_next {
+      right: 0;
+    }
+  }
+}
+
+
+
+
+.swiper-scrollbar {
+  bottom: -11px;
+  height: 2px !important;
+}
+
+.swiper-scrollbar-drag {
+  background: $gold-light !important;
+}

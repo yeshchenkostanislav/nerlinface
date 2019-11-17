@@ -1,0 +1,43 @@
+.footer.section
+    ._wrap.wrap
+        ._position
+            +svg('position')
+            ._position-info
+                ._position-info-title Ваше местоположение:
+                select._select
+                    option(selected="selected")._options Волгоград
+                    option._options Москва
+        ._slider-box
+            .slider.swiper-container
+                ._wrapper.swiper-wrapper
+                    ._swiper-slide.swiper-slide
+                        ._slider-item
+                            ._list-item
+                                +svg('icon-VK')
+                            | подключить
+                    ._swiper-slide.swiper-slide
+                        ._slider-item
+                            ._list-item
+                                +svg('icon-VK')
+                            | подключить2
+                    ._swiper-slide.swiper-slide
+                        ._slider-item
+                            ._list-item
+                                +svg('icon-VK')
+                            | подключить3
+                .slider-btn-prev &lt;
+                .slider-btn-next &gt;
+
+        .social-networks
+            ._text Рассказать друзьям
+            ._list
+                a(href="#", title="title" data-link="Через VK")._list-item
+                    +svg('icon-VK')
+                a(href="#", title="title" data-link="Через Instagram")._list-item
+                    +svg('icon-inst')
+                a(href="#", title="title" data-link="Через Facebook")._list-item
+                    +svg('icon-fb ') 
+                a(href="#", title="title" data-link="Через youtube")._list-item
+                    +svg('icon-youtube')
+                a(href="#", title="title" data-link="Через telegram")._list-item
+                    +svg('icon-telegram') 

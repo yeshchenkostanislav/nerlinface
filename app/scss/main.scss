@@ -48,7 +48,7 @@ input {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  padding: 0 30px;
+  //padding: 0 15px;
   width: 95%;
 }
 
@@ -71,7 +71,14 @@ input {
 @import "icons";
 
 // index-page
-@import "../elements/index-page/index-page";
+@import "../elements/index/index-page/index-page";
+@import "../elements/common-elements/sidebar/sidebar";
+@import "../elements/index/modal/modal";
+@import "../elements/common-elements/footer/footer";
 
-@import "../elements/sidebar/sidebar";
-@import "../elements/modal/modal";
+// services
+@import "../elements/services/header/header";
+@import "../elements/services/content/content";
+@import "../elements/services/logo/logo";
+@import "../elements/services/slider/slider";
+@import "../elements/services/menu/menu";

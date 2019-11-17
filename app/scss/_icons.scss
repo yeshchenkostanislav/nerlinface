@@ -118,7 +118,77 @@
     fill: #b1a881;
   }
 
+  // services
+  &.logo-mini {
+    background: url(img/icons/logo-mini.png)no-repeat center/cover;
+    width: 25px;
+    height: 25px;
+  }
 
+  &-voice-svg {
+    width: 24px;
+    height: 15px;
+    fill: #eaeaea;
+  }
 
+  //app/elements/services/content
+  &-postal {
+    width: 18px;
+    height: 13px;
+    fill: rgba(#fff, .5);
+  }
 
+  &-phone {
+    width: 12px;
+    height: 20px;
+    fill: rgba(#fff, .5);
+  }
+
+  &-photo-profile {
+    width: 32px;
+    height: 40px;
+    fill: $gold;
+  }
+
+  &-full-height {
+    width: 14px;
+    height: 43px;
+    fill: $gold;
+  }
+
+  // app/elements/services/menu/svg-icons
+  &-collection-svg {
+    width: 24px;
+    height: 18px;
+    fill: rgba(#fff, .3);
+  }
+
+  &-star-svg {
+    width: 24px;
+    height: 23px;
+    fill: rgba(#fff, .3);
+  }
+
+  &-description {
+    width: 18px;
+    height: 23px;
+    fill: rgba(#fff, .3);
+  }
+
+  &-full-description {
+    width: 24px;
+    height: 24px;
+    fill: rgba(#fff, .3);
+  }
+
+  &-people-svg {
+    width: 25px;
+    height: 24px;
+    fill: rgba(#fff, .3);
+  }
+  &-header {
+   width: 24px;
+height: 14px;
+    fill: rgba(#fff, .3);
+  }
 }

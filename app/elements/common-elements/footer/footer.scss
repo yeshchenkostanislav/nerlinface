@@ -1,0 +1,105 @@
+.footer {
+  margin: 25px 0 0 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 20px 0;
+
+  &__wrap {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__position {
+    display: flex;
+    align-items: center;
+  }
+
+  &__position-info {
+    margin: 0 0 0 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(#ffffff, .2);
+  }
+
+  &__select {
+    outline: none;
+    font-family: "Andale Mono";
+    padding: 0px 19px 0px 0px;
+    font-size: 14px;
+    color: rgba(#fff, .7);
+    border: none;
+    border-bottom: 1px solid $gold;
+    height: 30px;
+    appearance: none;
+    background: url(img/arrow-select.png) 96% / 9% no-repeat transparent;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__options {
+    background: #000;
+    outline: none;
+    border: none;
+  }
+
+  &__slider-box {
+    position: relative;
+    width: 240px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 60px 0 auto;
+
+    &:hover {
+
+      &:after,
+      &::before {
+        border: 1px solid $gold;
+      }
+
+      &:after {
+        border-right: none;
+        left: -5px;
+      }
+
+      &:before {
+        border-left: none;
+        right: -5px;
+      }
+    }
+
+
+    &:after {
+      content: '';
+      border: 1px solid #403e40;
+      border-right: none;
+      height: 90%;
+      width: 10px;
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0;
+      z-index: 100;
+      transition: $t-time;
+    }
+
+    &::before {
+      content: '';
+      border: 1px solid #403e40;
+      border-left: none;
+      height: 90%;
+      width: 10px;
+      display: block;
+      position: absolute;
+      right: 0px;
+      top: 0;
+      z-index: 100;
+      transition: $t-time;
+    }
+  }
+}

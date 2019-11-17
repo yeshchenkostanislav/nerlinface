@@ -133,23 +133,16 @@ function run(nameOf, speed = 1) {
   }, speed);
 }
 
-var mySwiper = new Swiper('.swiper-container', {
+var mySwiper = new Swiper('.slider', {
   // Optional parameters
   slidesPerView: 1,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+  autoHeight: true,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+    nextEl: '.slider-btn-next',
+    prevEl: '.slider-btn-prev',
+  }
 })

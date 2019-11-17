@@ -1,0 +1,27 @@
+.header.section
+  ._wrap.wrap
+    ._info
+        +svg('header-logo', 'index-page__header-logo')
+        ._menu
+            span._menu-line
+        ._info-text меню
+        ._voice
+          +svg('voice-svg')
+          span._voice-text Звук
+    ._box
+        ._coin
+          +icon('logo-mini')
+          ._coin-content
+            ._coin-content-num 187 FCoins
+              ._hint ?
+                ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                  ._line.-left
+                  ._line.-right
+            ._top-up + Пополнить
+
+        ._user-info
+            ._user-info-photo
+                img(src="img/user-photo.png", alt="alt")._user-info-img
+            ._user-info-name
+                | Ксения Иванова
+                +svg('arrow-down', 'index-page__arrow-down')
