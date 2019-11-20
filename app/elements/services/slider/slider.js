@@ -4,6 +4,31 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    576: {
+      slidesPerView: 5,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    992: {
+      slidesPerView: 6,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    1200: {
+      slidesPerView: 10,
+      autoHeight: true
+    }
+  }
 
 });
 var galleryTop = new Swiper('.gallery-top', {

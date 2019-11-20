@@ -3,6 +3,11 @@ $(".index-page__parameter-list").mCustomScrollbar({
   autoHideScrollbar: true,
   theme: "my-theme"
 });
+$(".content__side-bar-comment-text").mCustomScrollbar({
+  scrollbarPosition: "outside",
+  autoHideScrollbar: true,
+  theme: "my-theme"
+});
 
 $("body").niceScroll({
   cursorcolor: "$gold",
@@ -27,6 +32,10 @@ $(".modal__text").niceScroll({
   stringsElement: '.index-page__social-networks-text',
   typeSpeed: 30
 }); */
+
+if ($(window).width() < 992) {
+  $('.referral-program__text').text("Рассказать друзьям");
+};
 
 $('.referral-program__list-item').hover(function () {
     $('.referral-program__text').addClass('referral-program__text_active');

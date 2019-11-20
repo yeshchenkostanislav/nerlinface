@@ -7,6 +7,10 @@
     align-items: center;
     justify-content: space-between;
     margin: 20px 0 0 0;
+
+    @media(max-width: 992px) {
+      flex-direction: column;
+    }
   }
 
   &__add-slide-btn {
@@ -15,6 +19,14 @@
     justify-content: space-between;
     max-width: 440px;
     width: 100%;
+
+    @media(max-width: 992px) {
+      margin: 30px 0 0 0;
+    }
+
+    @media(max-width: 576px) {
+      flex-direction: column;
+    }
   }
 
   &__upload-file {
@@ -24,6 +36,14 @@
     height: 189px;
 
     &:first-child {
+      @media(max-width: 768px) {
+        margin: 0 10px 0 0;
+      }
+
+      @media(max-width: 576px) {
+        margin: 0;
+      }
+
       #{$root} {
         &__label {
           padding: 55px 0 0 0;
@@ -32,6 +52,10 @@
     }
 
     &:last-child {
+      @media(max-width: 576px) {
+        margin: 15px 0 0 0;
+      }
+
       #{$root} {
         &__label {
           padding: 40px 0 0 0;
@@ -189,6 +213,10 @@
   max-width: 700px;
   padding: 0 0 15px 0;
 
+  @media(max-width: 1300px) {
+    height: 100px;
+  }
+
   &-btn {
     color: #868586;
     font-size: 30px;
@@ -204,6 +232,25 @@
 
     &_next {
       right: 0;
+
+      @media(max-width: 1200px) {
+        right: -10px;
+      }
+
+      @media(max-width: 992px) {
+        right: -20px;
+      }
+    }
+
+    &_prev {
+
+      @media(max-width: 1200px) {
+        left: -10px;
+      }
+
+      @media(max-width: 992px) {
+        left: -20px;
+      }
     }
   }
 }
@@ -214,6 +261,10 @@
 .swiper-scrollbar {
   bottom: -11px;
   height: 2px !important;
+
+  @media(max-width: 1200px) {
+    bottom: -20px !important;
+  }
 }
 
 .swiper-scrollbar-drag {
