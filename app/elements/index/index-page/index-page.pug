@@ -1,18 +1,7 @@
 .index-page.section
     ._wrap.wrap 
-        ._header
-            ._header-info
-                +svg('header-logo', 'index-page__header-logo')
-                ._menu
-                    span._menu-line
-                ._header-info-text меню
-            ._header-box
-                ._user-info
-                    ._user-info-photo
-                        img(src="img/user-photo.png", alt="alt")._user-info-img
-                    ._user-info-name
-                        | Ксения Иванова
-                        +svg('arrow-down', 'index-page__arrow-down')
+        include ../../common-elements/header/header
+        
         ._content
             ._opcions
                 ._information-person
@@ -99,15 +88,25 @@
                             ._subparagraphs-num
                                 ._subparagraphs-text Подпараметр 1
                                 ._hint ?
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
                             ._subparagraphs-info-close
                                 | Скрыть
                                 +svg('arrow', 'index-page__close-arrow')
                         ._subparagraphs-info-text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam assumenda cum tempore odit optio, animi nihil voluptate est harum reiciendis obcaecati quis minima ipsam cumque odio molestias, et velit eius architecto, recusandae soluta doloremque! Perferendis, ea magni, placeat laborum voluptates sunt ipsum ullam iure quibusdam quisquam voluptas, assumenda voluptate numquam sint nulla amet quaerat suscipit laboriosam odio mollitia perspiciatis. Expedita repellat reprehenderit maiores dolorum voluptate quam officia ut aspernatur, itaque veritatis vitae ea hic optio eum inventore asperiores magnam pariatur quae corporis modi fugit perferendis sapiente. Dolore optio quasi animi tempora, quaerat dolores commodi consequatur saepe. Cum voluptates, nam laborum voluptatem, soluta aspernatur, laudantium id tempora earum nisi eos quibusdam. Quibusdam quaerat exercitationem est odio tempore doloribus, culpa omnis facilis, deserunt sequi quo placeat non voluptates eum maiores corrupti excepturi ipsam at incidunt! Ab itaque, voluptas et similique magnam, reiciendis inventore sapiente ad, eos error quaerat. Tempora, enim voluptatum. Quam vero earum eius? Nihil, harum temporibus odio nisi eligendi eum sequi praesentium aliquam assumenda quod. Consectetur, eveniet distinctio exercitationem sequi nisi esse, accusamus repellendus ipsa nostrum dolor, minus nulla officiis at et rerum optio. Quae perferendis obcaecati quod saepe? Autem praesentium fuga voluptas reiciendis porro dolorum, pariatur dicta nisi aut itaque iusto? Dolorum id quibusdam quos corrupti ut numquam, sed veritatis natus illo nihil labore temporibus perspiciatis tenetur ratione quasi soluta tempore. Doloribus dolor nulla distinctio quos, architecto illo labore pariatur deserunt mollitia consectetur accusantium aut, praesentium, molestias magnam ex non id dolorum repellendus in est quod. Inventore exercitationem laborum sunt suscipit eaque. Quibusdam quos, minus impedit enim eos fugiat corrupti id nisi tenetur saepe ipsum aut, voluptatem nam sint! Facilis quia dolorem impedit reprehenderit, dicta modi aliquid quam aperiam commodi! Molestiae culpa veniam voluptatem, neque natus reprehenderit expedita corporis reiciendis eveniet eum animi sunt inventore vitae optio explicabo, cupiditate harum sapiente quidem porro. Nisi fugit repudiandae sapiente. In veritatis eos error id iusto quis aperiam accusantium consequuntur officiis.
             ._side-bar
-                ._referral-program
-                    | Реферальная программа
-                    ._referral-program-icon
+                .referral-program
+                    ._text Реферальная программа
+                    a(href="#", title="title" data-link="Через VK")._list-item
+                        +svg('icon-VK')
+                    a(href="#", title="title" data-link="Через Instagram")._list-item
+                        +svg('icon-inst')
+                    a(href="#", title="title" data-link="Через Facebook")._list-item
+                        +svg('icon-fb ') 
+                    a(href="#", title="title" data-link="Реферальная программа")._list-item
                         +svg('referral-program', "index-page__referral-program-svg")
+                
                 ._parameter-list
                     ._parameter-list-item
                         ._parameter-list-item-header
@@ -115,16 +114,30 @@
                                 ._parameter-list-item-btn-text параметр 1
                                 +svg('arrow')
                             ._hint ?
+                                ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                    ._line.-left
+                                    ._line.-right
                         ._subparagraphs-list
                             ._subparagraphs-list-item
                                 ._subparagraphs-list-item-text Подпараметр 1
                                 ._hint.-sub ?
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
                             ._subparagraphs-list-item
                                 ._subparagraphs-list-item-text Подпараметр 2
                                 ._hint.-sub ?
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
+                                
                             ._subparagraphs-list-item
                                 ._subparagraphs-list-item-text Подпараметр 3
                                 ._hint.-sub ?
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
+                                
 
                     ._parameter-list-item
                         ._parameter-list-item-header
@@ -132,16 +145,28 @@
                                 ._parameter-list-item-btn-text параметр 2
                                 +svg('arrow')
                             ._hint ?
+                                ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                    ._line.-left
+                                    ._line.-right
                         ._subparagraphs-list
                             ._subparagraphs-list-item
                                 ._subparagraphs-list-item-text Подпараметр 1
                                 ._hint.-sub ?
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
                             ._subparagraphs-list-item
                                 ._subparagraphs-list-item-text Подпараметр 2
                                 ._hint.-sub ?
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
                             ._subparagraphs-list-item
                                 ._subparagraphs-list-item-text Подпараметр 3
                                 ._hint.-sub ?
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
 
                     ._parameter-list-item
                         ._parameter-list-item-header
@@ -149,16 +174,28 @@
                                 ._parameter-list-item-btn-text параметр 3
                                 +svg('arrow')
                             ._hint ?
+                                ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                    ._line.-left
+                                    ._line.-right
                         ._subparagraphs-list
                             ._subparagraphs-list-item
                                 ._subparagraphs-list-item-text Подпараметр 1
                                 ._hint.-sub ?
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
                             ._subparagraphs-list-item
                                 ._subparagraphs-list-item-text Подпараметр 2
                                 ._hint.-sub ?
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
                             ._subparagraphs-list-item
                                 ._subparagraphs-list-item-text Подпараметр 3
                                 ._hint.-sub ?
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
 
                     ._parameter-list-item
                         ._parameter-list-item-header
@@ -166,21 +203,29 @@
                                 ._parameter-list-item-btn-text параметр 4
                                 +svg('arrow')
                             ._hint ?
+                                ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                    ._line.-left
+                                    ._line.-right
                         ._subparagraphs-list
                             ._subparagraphs-list-item
                                 ._subparagraphs-list-item-text Подпараметр 1
                                 ._hint.-sub ?
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
                             ._subparagraphs-list-item
                                 ._subparagraphs-list-item-text Подпараметр 2
                                 ._hint.-sub ?
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
                             ._subparagraphs-list-item
                                 ._subparagraphs-list-item-text Подпараметр 3
                                 ._hint.-sub ?
-        ._user-agreement
-            ._terms-use
-                a(href="#", title="title" data-modal=".agreement")._terms-use-link Пользовательское соглашение
-                a(href="#", title="title" data-modal=".agreement")._terms-use-link О проекте
-            +icon('user-agreement-logo', 'index-page__user-agreement-logo')
+                                    ._hint-popup Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                        ._line.-left
+                                        ._line.-right
+        include ../../common-elements/logo/logo
         include ../../common-elements/footer/footer
     include ../../common-elements/sidebar/sidebar
     

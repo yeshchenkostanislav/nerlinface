@@ -107,8 +107,8 @@
   }
 
   &-referral-program {
-    width: 21px;
-    height: 22px;
+    width: 16px;
+    height: 19px;
     fill: #747474;
   }
 
@@ -186,9 +186,34 @@
     height: 24px;
     fill: rgba(#fff, .3);
   }
+
   &-header {
-   width: 24px;
-height: 14px;
+    width: 24px;
+    height: 14px;
+    fill: rgba(#fff, .3);
+  }
+
+  &-head-svg {
+    width: 19px;
+    height: 24px;
+    fill: rgba(#fff, .3);
+  }
+
+  &-heart-svg {
+    width: 24px;
+    height: 19px;
+    fill: rgba(#fff, .3);
+  }
+
+  &-feeding {
+    width: 24px;
+    height: 19px;
+    fill: rgba(#fff, .3);
+  }
+
+  &-training {
+    width: 24px;
+    height: 19px;
     fill: rgba(#fff, .3);
   }
 }

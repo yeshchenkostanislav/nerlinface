@@ -44,7 +44,7 @@ $('.sidebar__list-categories').on('click', '.sidebar__plus_names-people-list-ite
 })
 
 
-$('.index-page__menu').click(function () {
+$('.header__menu').click(function () {
     $('.sidebar').toggleClass('sidebar_active');
     $('.sidebar__list-categories-item-title').each(function (i) {
         let $this = $(this);
@@ -77,4 +77,9 @@ $('.sidebar__sidebar-search').keyup(function () {
             opacity: '1'
         });
     }
+})
+
+// самопечатающийся текст в мод окне
+$('.sidebar__terms-use .sidebar__terms-use-link').click(function () {
+    run('.modal__text');
 })

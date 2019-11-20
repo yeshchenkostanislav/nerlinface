@@ -68,6 +68,75 @@ input {
   border: 1px solid rgba($gold, .5) !important;
 }
 
+.services {
+  background: #181718 url(img/index-page-bg.svg) no-repeat top;
+  background-position: center -122px;
+}
+
+.referral-program {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #9a9a9a;
+  max-width: 225px;
+  width: 100%;
+  font-size: 13px;
+  margin: -15px 0 0 0;
+
+  &:hover {
+    cursor: pointer;
+    color: $gold;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 29px;
+    height: 29px;
+    border-radius: 14px;
+    border: 1px solid #403e40;
+    transition: .4s;
+    flex: none;
+
+    &:not(:last-child) {
+      margin: 0 5px 0 0;
+    }
+
+    &:last-child {
+      padding: 0 0 0 4px;
+    }
+
+    &:hover {
+      border: 1px solid rgba($gold, 0.5);
+
+      svg {
+        fill: rgba($gold, 1);
+        transition: .4s;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 11px;
+    margin: 0 10px 0 0;
+    max-width: 90px;
+    width: 100%;
+    transition: .4s;
+    color: #9a9a9a;
+    opacity: 0;
+    visibility: hidden;
+
+    &_active {
+      color: $gold;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+
+
 @import "icons";
 
 // index-page
@@ -77,8 +146,8 @@ input {
 @import "../elements/common-elements/footer/footer";
 
 // services
-@import "../elements/services/header/header";
+@import "../elements/common-elements/header/header";
 @import "../elements/services/content/content";
-@import "../elements/services/logo/logo";
+@import "../elements/common-elements/logo/logo";
 @import "../elements/services/slider/slider";
 @import "../elements/services/menu/menu";

@@ -213,7 +213,7 @@
                 ._slide-photo
                   img(src="img/photo-big.png", alt="alt")
         ._add-slide-btn
-          ._upload-file
+          ._upload-file.append-slide
             label._upload-photo
                 input(type="file")._upload-photo-input
                 ._upload-icon
@@ -223,7 +223,7 @@
                     | фото профиль
                     ._arrow-upload
                         +svg('arrow-upload', 'index-page__arrow-upload-svg animate')
-          ._upload-file
+          ._upload-file.append-slide
             label._upload-photo
                 input(type="file")._upload-photo-input
                 ._upload-icon
@@ -269,14 +269,20 @@
             option._options Вариант 1
             option._options Вариант 2
             option._options Вариант 3
-      ._center-block-comments
+      //._center-block-comments
         ._center-block-comments-title Комментарий:
         ._center-block-comments-text Далеко-далеко за словесными горами в стране гласных исогласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир.
     ._side-bar
-      ._referral-program
-          | Реферальная программа
-          ._referral-program-icon
-              +svg('referral-program', "content__referral-program-svg")
+      .referral-program
+          ._text Реферальная программа
+          a(href="#", title="title" data-link="Через VK")._list-item
+              +svg('icon-VK')
+          a(href="#", title="title" data-link="Через Instagram")._list-item
+              +svg('icon-inst')
+          a(href="#", title="title" data-link="Через Facebook")._list-item
+              +svg('icon-fb ') 
+          a(href="#", title="title" data-link="Реферальная программа")._list-item
+              +svg('referral-program', "index-page__referral-program-svg")
       ._side-bar-comment
         ._side-bar-comment-title Комментарий:
         ._side-bar-comment-text Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир.
@@ -297,7 +303,7 @@
           ._box-list-svg
             +svg("star-svg")
           span._box-list-text Обзоры личностей
-          
+           
     ._box
       ._box-title Услуги
       ._box-list
@@ -323,20 +329,29 @@
 
         ._box-list-item
           ._box-list-svg
-            +svg("full-description")
+            +svg("head-svg")
           span._box-list-text Ваш нейротип
 
         ._box-list-item
           ._box-list-svg
-            +svg("full-description")
+            +svg("heart-svg")
           span._box-list-text Ваш идеальный партнер
 
         ._box-list-item
           ._box-list-svg
-            +svg("full-description")
+            +svg("feeding")
           span._box-list-text Система питания
 
         ._box-list-item
           ._box-list-svg
-            +svg("full-description")
+            +svg("training")
           span._box-list-text План по тренировкам
+
+    ._coin-info
+      +icon('logo-mini', 'content__coin-info-svg')
+      span._coin-info-text 187 FCoins
+
+    ._link-list
+      a(href="#", title="title")._link-list-item О проекте
+      a(href="#", title="title")._link-list-item Контакты
+    

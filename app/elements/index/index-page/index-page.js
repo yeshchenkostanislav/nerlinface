@@ -3,11 +3,19 @@ $(".index-page__parameter-list").mCustomScrollbar({
   autoHideScrollbar: true,
   theme: "my-theme"
 });
+
+$("body").niceScroll({
+  cursorcolor: "$gold",
+  cursorborder: "1px solid $gold",
+  cursorwidth: "1px",
+});
+
 $(".index-page__subparagraphs-info-text").niceScroll({
   cursorcolor: "$gold",
   cursorborder: "1px solid $gold",
   cursorwidth: "1px",
 });
+
 $(".modal__text").niceScroll({
   cursorcolor: "$gold",
   cursorborder: "1px solid $gold",
@@ -20,13 +28,14 @@ $(".modal__text").niceScroll({
   typeSpeed: 30
 }); */
 
-$('.social-networks__list-item').hover(function () {
-    $('.social-networks__text').addClass('social-networks__text_active');
-
-    //run('.social-networks__text', 20);
+$('.referral-program__list-item').hover(function () {
+    $('.referral-program__text').addClass('referral-program__text_active');
+    let dataLink = $(this).attr('data-link');
+    $('.referral-program__text').text(dataLink);
+    //run('.referral-program__text', 20);
   })
   .on('mouseleave blur', function () {
-    $('.social-networks__text').removeClass('social-networks__text_active');
+    $('.referral-program__text').removeClass('referral-program__text_active');
   });
 
 // применение класса active к типам
@@ -87,13 +96,6 @@ $('.index-page__subparagraphs-list-item-text').click(function () {
 
 
 });
-
-
-// самопечатающийся текст в мод окне
-$('.index-page__terms-use .index-page__terms-use-link').click(function () {
-  run('.modal__text');
-})
-
 
 function run(nameOf, speed = 1) {
 

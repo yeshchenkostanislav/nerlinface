@@ -177,4 +177,24 @@
       color: rgba(#9d9d9d, .7);
     }
   }
+
+  &__terms-use {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 40px 0 0 0;
+  }
+
+  &__terms-use-link {
+    color: rgba(#fff, .25);
+    font-size: 12px;
+    text-decoration: underline;
+
+    &:not(:first-child) {
+      margin: 15px 0 0 0;
+    }
+  }
 }
